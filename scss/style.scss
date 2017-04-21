@@ -103,12 +103,43 @@ header {
     background: linear-gradient(to bottom, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
 }
 
+.inner-container{
+    display: flex;
+}
+
+.col1 {
+    color: rgb(36, 186, 159);
+    width: 10%;
+    line-height: 240px;
+    padding: 8px;
+    font-weight: 800;
+    @media (min-width: $breakpoint){
+        display: none; 
+        }
+    }
+
+.slide {
+    @media (max-width: $breakpoint){
+        display: none;
+    }
+}
+        
 .blackChair {
+    height: 295px;
+    background-size: cover;
+    background-position-x: center;
     background-image: url(../images/black_chair.png);
+    @media (min-width: $breakpoint) {
     margin-top: 67px;
     height: 428px;
-    background-size: cover;
     background-position-x: -130px;
+    }
+}
+
+@media (max-width: $breakpoint){
+    .order {
+        order:2;
+    }
 }
 
 .clair {
