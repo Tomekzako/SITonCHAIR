@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+ 
+.row {
+  &::after, &::before {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+$columnsCount: 12;
+$breakpoint: 420px;
+
+@for $i from 1 through $columnsCount {
+  .col-#{$i} {
+    width: (100%/$columnsCount)*$i;
+  }
+}
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding: 10px;
+ 
+  @media (max-width: $breakpoint) {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*HEADER*/
+
+li{
+    display: inline-block;
+}
+
+.first{
+    background: -webkit-linear-gradient(top, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
+    background: -o-linear-gradient(top, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
+    background: -ms-linear-gradient(top, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
+    background: -moz-linear-gradient(top, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
+    background: linear-gradient(to bottom, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
+}
+
+.blackChair {
+    background-image: url(../images/black_chair.png);
+    height: 300px;
+}
+
+.clair {
+    background-image: url(../images/box1_img.jpg);
+    height: 200px;
+}
+.margarita {
+    background-image: url(../images/box2_img.jpg);
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+.redChair {
+    background-image: url(../images/red_chair.png);
+    height: 200px;
+}
