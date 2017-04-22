@@ -103,8 +103,9 @@ header {
     background: linear-gradient(to bottom, rgb(247, 247, 247) 0%, rgb(207, 206, 211) 100%);
 }
 
-.inner-container{
+.inner-container {
     display: flex;
+    margin-top: 20px;
 }
 
 .col1 {
@@ -113,33 +114,73 @@ header {
     line-height: 240px;
     padding: 8px;
     font-weight: 800;
-    @media (min-width: $breakpoint){
-        display: none; 
-        }
-    }
-
-.slide {
-    @media (max-width: $breakpoint){
+    @media (min-width: $breakpoint) {
         display: none;
     }
 }
-        
+
+.slide {
+    line-height: 515px;
+    font-size: 5rem;
+    font-weight: 300;
+    color: rgb(36, 186, 159);
+    @media (max-width: $breakpoint) {
+        display: none;
+    }
+}
+
 .blackChair {
     height: 295px;
     background-size: cover;
     background-position-x: center;
     background-image: url(../images/black_chair.png);
     @media (min-width: $breakpoint) {
-    margin-top: 67px;
-    height: 428px;
-    background-position-x: -130px;
+        margin-top: 55px;
+        height: 428px;
+        background-position-x: -130px;
     }
 }
 
-@media (max-width: $breakpoint){
+@media (max-width: $breakpoint) {
     .order {
-        order:2;
+        order: 2;
     }
+}
+
+.col-5 {
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 15px auto;
+        font-size: 2rem;
+        font-weight: 600;
+        strong {
+            color: rgb(36, 186, 159);
+        }
+    }
+    p {
+        text-align: center;
+        line-height: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding-top: 15px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.linkButt {
+    margin: 30px auto;
+    padding: 10px 30px;
+    background-color: #24ba9f;
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    display: flex;
 }
 
 .clair {
