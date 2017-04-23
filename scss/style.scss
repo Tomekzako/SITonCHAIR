@@ -206,17 +206,25 @@ header {
 
 .second {
     background-color: #FFF;
+    @media (min-width: $breakpoint) {
+        height: 353px;
+        padding-top: 27px;
+    }
 }
 
 .visible {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
-    height: 70px;
-    top: 155px;
+    height: 65px;
+    top: 171px;
+    @media (min-width: $breakpoint) {
+        height: 62px;
+        top: 149px;
+    }
     p {
         font-weight: 700;
-        padding: 20px 0 0 10px;
+        padding: 15px 0 0 14px;
         &:after {
             content: ' ';
             display: block;
@@ -233,6 +241,10 @@ header {
     height: 250px;
     margin: 10px 0;
     position: relative;
+    @media (min-width: $breakpoint) {
+        background-size: 95% 90%;
+        margin: 0 10px 0 0;
+    }
 }
 
 .margarita {
@@ -246,10 +258,16 @@ header {
 }
 
 .inputs {
-    padding: 10px 20px 10px;
-    text-align: justify;
+    padding: 10px 18px 10px;
+    text-align: left;
     border: 1px solid rgb(218, 218, 218);
+    @media (min-width: $breakpoint) {
+        width: 31%;
+        height: 259px;
+    }
     h4 {
+        font-size: 1rem;
+        padding-top: 15px;
         font-weight: 700;
         &:after {
             content: ' ';
@@ -259,7 +277,29 @@ header {
         }
     }
     p {
-        font-size: 0.9rem;
-        color: rgba(0, 0, 0, 0.7);
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 20px;
+    }
+}
+
+
+/*SECTION 3*/
+
+.third {
+    background-color: rgb(241, 241, 241);
+    height: 725px;
+    h3 {
+        padding-top: 35px;
+        line-height: 37px;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        &:after {
+            content: ' ';
+            display: block;
+            border: 4px solid rgb(41, 201, 175);
+            width: 320px;
+        }
     }
 }
