@@ -201,17 +201,65 @@ header {
     display: flex;
 }
 
+
+/*SECTION 2 */
+
+.second {
+    background-color: #FFF;
+}
+
+.visible {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: 70px;
+    top: 110px;
+    p {
+        font-weight: 700;
+        padding: 20px 0 0 10px;
+        &:after {
+            content: ' ';
+            display: block;
+            border: 3px solid rgb(41, 201, 175);
+            width: 140px;
+        }
+    }
+}
+
 .clair {
     background-image: url(../images/box1_img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 200px;
+    margin: 10px 0;
+    position: relative;
 }
 
 .margarita {
+    @extend .clair;
     background-image: url(../images/box2_img.jpg);
-    height: 200px;
 }
 
 .redChair {
     background-image: url(../images/red_chair.png);
     height: 200px;
+}
+
+.inputs {
+    padding: 10px 20px 10px;
+    text-align: justify;
+    border: 1px solid rgb(218, 218, 218);
+    h4 {
+        font-weight: 700;
+        &:after {
+            content: ' ';
+            display: block;
+            border: 3px solid rgb(41, 201, 175);
+            width: 140px;
+        }
+    }
+    p {
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
 }
