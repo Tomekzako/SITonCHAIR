@@ -293,21 +293,6 @@ header {
     @media (min-width: $breakpoint) {
         height: 725px;
     }
-    h3 {
-        @media (max-width: $breakpoint) {
-            padding-left: 10px;
-        }
-        padding-top: 35px;
-        line-height: 37px;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        &:after {
-            content: ' ';
-            display: block;
-            border: 4px solid rgb(41, 201, 175);
-            width: 320px;
-        }
-    }
     .price {
         margin: 28px auto;
         width: 125px;
@@ -348,6 +333,22 @@ header {
             color: white;
             font-size: 17px;
         }
+    }
+}
+
+.title {
+    @media (max-width: $breakpoint) {
+        padding-left: 10px;
+    }
+    padding-top: 35px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    &:after {
+        content: ' ';
+        display: block;
+        border: 4px solid rgb(41, 201, 175);
+        width: 320px;
     }
 }
 
@@ -422,6 +423,7 @@ table {
     top: 245px;
     width: 100%;
     background-color: rgb(228, 228, 228);
+    border: none;
     th,
     td {
         font-size: 23px;
@@ -431,4 +433,50 @@ table {
     tr:nth-child(even) {
         background-color: #f2f2f2;
     }
+}
+
+
+/*SECTION 4*/
+
+.fourth {
+    height: 500px;
+    .col-8 {
+        margin-top: 36px;
+    }
+    @mixin placeholder {
+        &::-webkit-input-placeholder {
+            @content
+        }
+        &:-moz-placeholder {
+            @content
+        }
+        &::-moz-placeholder {
+            @content
+        }
+        &:-ms-input-placeholder {
+            @content
+        }
+    }
+    input {
+        font-family: Raleway, sans-serif;
+        height: 66px;
+        font-size: 33px;
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 26px;
+        border: 1px solid rgb(41, 201, 175);
+        @include placeholder {
+            color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    textarea {
+        @extend input;
+        height: 200px;
+    }
+}
+
+.redChair {
+    margin-top: 11px;
+    margin-left: 7px;
+    background-repeat: no-repeat;
 }
