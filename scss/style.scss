@@ -288,8 +288,11 @@ header {
 /*SECTION 3*/
 
 .third {
+    height: 1850px;
     background-color: rgb(241, 241, 241);
-    height: 725px;
+    @media (min-width: $breakpoint){
+         height: 725px;   
+    }
     h3 {
         padding-top: 35px;
         line-height: 37px;
@@ -330,7 +333,7 @@ header {
         padding: 7px 25px;
         margin: 0 auto;
         display: block;
-        margin-top: 388px;
+        margin-top: 235px;
         font-weight: 500;
         border: none;
         background-color: #24ba9f;
@@ -359,19 +362,21 @@ header {
     }
 }
 
-.padRight {
-    padding-right: 15px;
+@media (min-width: $breakpoint){ 
+    .padRight {
+        padding-right: 15px;
+    }
+    .pad {
+        padding: 0 10px;
+    }
+    .padLeft {
+        padding-left: 15px;
+    }
 }
 
-.pad {
-    padding: 0 10px;
-}
-
-.padLeft {
-    padding-left: 15px;
-}
 
 .pricePlan {
+    margin: 74px 10px 0 10px;
     background-color: rgb(249, 249, 249);
     border: 2px solid darkgrey;
     height: 500px;
@@ -384,9 +389,9 @@ header {
         color: rgb(36, 186, 159);
         letter-spacing: -1px;
     }
-    @media (min-width: $breakpoint) {
-        margin-top: 74px;
-    }
+    @media (min-width: $breakpoint){
+        margin: 74px 0 0 0;
+    }   
 }
 
 table {
