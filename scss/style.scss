@@ -302,6 +302,30 @@ header {
             width: 320px;
         }
     }
+    .price {
+        margin: 28px auto;
+        width: 125px;
+        height: 125px;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid darkgrey;
+        color: darkgray;
+        .size {
+            padding-top: 17px;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .sizeOne {
+            font-size: 1rem;
+            font-weight: 700;
+            padding-top: 3px;
+        }
+        sup {
+            font-size: 15px;
+            font-weight: 700;
+            top: -1.5em;
+        }
+    }
     button {
         padding: 7px 25px;
         margin: 0 auto;
