@@ -439,7 +439,7 @@ table {
 /*SECTION 4*/
 
 .fourth {
-    height: 820px;
+    height: 880px;
     @media (min-width: $breakpoint) {
         height: 500px;
     }
@@ -513,15 +513,21 @@ table {
         border: none;
         letter-spacing: 1px;
         a {
-        text-decoration: none;
-        color: white;
+            text-decoration: none;
+            color: white;
+        }
     }
+    .inner {
+        @extend .inner-container;
+        width: 90%;
+        margin: auto;
     }
 }
 
 .redChair {
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 20px;
     @media (min-width: $breakpoint) {
         margin: 11px 0 38px 8px;
         background-position: left;
