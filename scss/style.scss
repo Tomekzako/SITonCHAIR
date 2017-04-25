@@ -517,13 +517,14 @@ table {
             color: white;
         }
     }
-    .inner {
-        @extend .inner-container;
-        width: 91%;
-        margin: auto;
-        @media (min-width: $breakpoint) {
-            width: 100%;
-        }
+}
+
+.inner {
+    @extend .inner-container;
+    width: 91%;
+    margin: auto;
+    @media (min-width: $breakpoint) {
+        width: 100%;
     }
 }
 
@@ -541,12 +542,22 @@ table {
 /*FOOTER*/
 
 footer {
-    margin-top: 80px;
+    margin-top: 20px;
     height: 100px;
+    @media (min-width: $breakpoint) {
+        margin-top: 80px;
+    }
     p {
+        padding-bottom: 15px;
+        font-size: 0.9rem;
         color: rgba(0, 0, 0, 0.5);
-        padding-top: 7px;
         letter-spacing: 1px;
+        text-align: center;
+        @media (min-width: $breakpoint) {
+            padding-top: 7px;
+            font-size: 1rem;
+            text-align: left;
+        }
     }
     .footTit {
         text-transform: uppercase;
