@@ -21,7 +21,14 @@
                 </div>
                 <div class="col-6">
                     <ul class="list">
-                        <li><a href="#">o firmie</a></li>
+                        <li class="dropdown"><a href="#">o firmie</a>
+                            <div class="triangle"></div>
+                            <div class="dropdown-content">
+                                <a href="#">Aktualności</a>
+                                <a href="#">Nasz team</a>
+                                <a href="#">Historia</a>
+                            </div>
+                        </li>
                         <li><a href="#">galeria</a></li>
                         <li><a href="#">kontakt</a></li>
                     </ul>
@@ -35,7 +42,13 @@
                 <div class="col-1 slideLeft">&lt;</div>
                 <div class="col-4 inner-container">
                     <div class="col-1 col1">&lt;</div>
-                    <div class="col-10 blackChair"></div>
+                    <div class="col-10 slider">
+                        <ul>
+                            <li><img src="images/black_chair.png" alt="Black chair"></li>
+                            <li><img src="images/orange.png" alt="Orange chair"></li>
+                            <li><img src="images/red_chair.png" alt="Red chair"></li>
+                        </ul>
+                    </div>
                     <div class="col-1 col1">&gt;</div>
                 </div>
                 <div class="col-6">
@@ -201,28 +214,30 @@
     </section>
     <footer>
         <div class="container">
-           <div class="flex">
-            <div class="col-8 order">
-                <p>Copyright 2014 |All Rights Reserved - Sit On Chair
-                </p>
-            </div>
-            <div class="col-4">
-                <div class="col-12 inner">
-                    <div class="col-6">
-                        <img src="images/flickr.png" alt="flickr">
-                        <img src="images/vimeo.png" alt="vimeo">
-                        <img src="images/pinterest.png" alt="pinterest">
-                        <img src="images/twitter.png" alt="twitter">
-                    </div>
-                    <div class="col-6">
-                        <p class="footTit">sit <strong>on</strong> chair</p>
-                    </div>
-                
+            <div class="flex">
+                <div class="col-8 order">
+                    <p>Copyright 2014 |All Rights Reserved - Sit On Chair
+                    </p>
                 </div>
-            </div>
+                <div class="col-4">
+                    <div class="col-12 inner">
+                        <div class="col-6">
+                            <img src="images/flickr.png" alt="flickr">
+                            <img src="images/vimeo.png" alt="vimeo">
+                            <img src="images/pinterest.png" alt="pinterest">
+                            <img src="images/twitter.png" alt="twitter">
+                        </div>
+                        <div class="col-6">
+                            <p class="footTit">sit <strong>on</strong> chair</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
