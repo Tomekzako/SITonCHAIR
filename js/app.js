@@ -2,7 +2,8 @@ $(function () {
 
     var $slideRight = $('.slideRight');
     var $slideLeft = $('.slideLeft');
-    var $slideMobile = $('.col1');
+    var $mobileLeft = $('.col1');
+    var $mobileRight = $('.col2');
     var $sectionFirst = $('.first');
     var $background = $sectionFirst.find('.blackChair');
     let chair = 1;
@@ -48,15 +49,21 @@ $(function () {
         });
     });
 
-    $slideMobile.on('click', function () {
+    $mobileLeft.on('click', function () {
         $background.fadeOut(1000, function () {
             chair++;
             setChair();
             $background.fadeIn(1000);
         });
-
     });
-
+    
+     $mobileRight.on('click', function () {
+        $background.fadeOut(1000, function () {
+            chair--;
+            setChair();
+            $background.fadeIn(1000);
+        });
+    });
 
 
 

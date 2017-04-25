@@ -162,6 +162,10 @@ li.dropdown {
     }
 }
 
+.col2 {
+    @extend .col1;
+}
+
 .slideLeft {
     cursor: pointer;
     line-height: 515px;
