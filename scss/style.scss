@@ -548,15 +548,15 @@ footer {
         margin-top: 80px;
     }
     p {
-        padding-bottom: 15px;
+        padding-top: 13px;
         font-size: 0.9rem;
         color: rgba(0, 0, 0, 0.5);
         letter-spacing: 1px;
         text-align: center;
         @media (min-width: $breakpoint) {
-            padding-top: 7px;
             font-size: 1rem;
             text-align: left;
+            padding-top: 10px;
         }
     }
     .footTit {
@@ -566,6 +566,12 @@ footer {
         font-size: 1.2rem;
         strong {
             font-weight: 800;
+        }
+    }
+    @media (max-width: $breakpoint) {
+        .flex {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
