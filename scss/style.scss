@@ -479,7 +479,7 @@ table {
     }
     textarea {
         @extend input;
-        height: 200px;
+        height: 189px;
         margin-bottom: 0;
     }
     .col-2 {
@@ -519,8 +519,11 @@ table {
     }
     .inner {
         @extend .inner-container;
-        width: 90%;
+        width: 91%;
         margin: auto;
+        @media (min-width: $breakpoint) {
+            width: 100%;
+        }
     }
 }
 
@@ -531,5 +534,27 @@ table {
     @media (min-width: $breakpoint) {
         margin: 11px 0 38px 8px;
         background-position: left;
+    }
+}
+
+
+/*FOOTER*/
+
+footer {
+    margin-top: 80px;
+    height: 100px;
+    p {
+        color: rgba(0, 0, 0, 0.5);
+        padding-top: 7px;
+        letter-spacing: 1px;
+    }
+    .footTit {
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: right;
+        font-size: 1.2rem;
+        strong {
+            font-weight: 800;
+        }
     }
 }
