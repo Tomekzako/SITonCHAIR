@@ -2,35 +2,62 @@ $(function () {
 
     var $slideRight = $('.slideRight');
     var $slideLeft = $('.slideLeft');
+    var $slideMobile = $('.col1');
     var $sectionFirst = $('.first');
-    var $ul = $sectionFirst.find('ul');
-    var $li = $ul.find('li');
-    console.log($ul, $li);
-    $slideRight.on('click', function () {
-        index++;
-        if (index >= $li.length) {
-            index = $li.length - 1;
+    var $background = $sectionFirst.find('.blackChair');
+    let chair = 1;
+
+    function setChair() {
+
+        switch (chair) {
+            case 1:
+
+                $background.css('background-image', 'url(images/black_chair.png)');
+                break;
+
+            case 2:
+
+                $background.css('background-image', 'url(images/orange.png)');
+                break;
+
+            case 3:
+
+                $background.css('background-image', 'url(images/red_chair.png)');
+                break;
+
+
         }
-        $ul.stop().animate({
-            left: -(index * width) + 'px'
-        }, 1000);
+    }
+
+
+
+    $slideRight.on('click', function () {
+        $background.fadeOut(1000, function () {
+            chair++;
+            setChair();
+            $background.fadeIn(1000);
+        });
+
     });
 
     $slideLeft.on('click', function () {
-        index--;
-        if (index < 0) {
-            index = 0;
-        }
-        $ul.stop().animate({
-            left: -(index * width) + 'px'
-        }, 1000);
+        $background.fadeOut(1000, function () {
+            chair--;
+            setChair();
+            $background.fadeIn(1000);
+        });
     });
 
-    var index = 0;
-    var width = $li.eq(0).width();
-    console.log(width);
+    $slideMobile.on('click', function () {
+        $background.fadeOut(1000, function () {
+            chair++;
+            setChair();
+            $background.fadeIn(1000);
+        });
 
-    $ul.css('width', $li.length * width + 'px');
+    });
+
+
 
 
 
