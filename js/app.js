@@ -64,28 +64,32 @@ $(function () {
         });
     });
 
+    $mobileRight.on('click', function () {
 
-    $mobileLeft.on('click', function () {
         $background.fadeOut(1000, function () {
             chair++;
             setChair();
             $background.fadeIn(1000);
+            if (chair > 2) {
+                $mobileRight.css("pointer-events", "none");
+            } else {
+                $mobileLeft.css("pointer-events", "auto");
+            }
         });
     });
 
-    $mobileRight.on('click', function () {
-
+    $mobileLeft.on('click', function () {
         $background.fadeOut(1000, function () {
             chair--;
             setChair();
             $background.fadeIn(1000);
+            if (chair < 2) {
+                $mobileLeft.css("pointer-events", "none");
+            } else {
+                $mobileRight.css("pointer-events", "auto");
+            }
         });
     });
-
-
-
-
-
 
 
 });
