@@ -95,12 +95,6 @@ header {
 li.dropdown {
     display: inline-block;
     position: relative;
-    &:hover {
-        .dropdown-content,
-        .triangle {
-            display: block;
-        }
-    }
 }
 
 .triangle {

@@ -6,7 +6,20 @@ $(function () {
     var $mobileRight = $('.col2');
     var $sectionFirst = $('.first');
     var $background = $sectionFirst.find('.blackChair');
+    const $dropdown = $('.dropdown');
+    const $dropdown_content = $dropdown.find('.dropdown-content');
+    const $triangle = $dropdown.find('.triangle');
     let chair = 1;
+
+
+    $dropdown.on('mouseenter', function () {
+        $(this).children().slice(1).css('display', 'block');
+    });
+
+    $dropdown.on('mouseleave', function () {
+        $(this).children().slice(1).css('display', 'none');
+    });
+
 
     function setChair() {
 
