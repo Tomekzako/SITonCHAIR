@@ -14,31 +14,40 @@ $(function () {
             case 1:
 
                 $background.css('background-image', 'url(images/black_chair.png)');
+                $background.css('background-size', 'cover');
+                $background.css('margin-top', '55px');
                 break;
 
             case 2:
 
                 $background.css('background-image', 'url(images/orange.png)');
+                $background.css('background-size', '135% 75%');
+                $background.css('margin-top', '55px');
                 break;
 
             case 3:
 
                 $background.css('background-image', 'url(images/red_chair.png)');
+                $background.css('background-size', '100% 70%');
+                $background.css('margin-top', '20px');
                 break;
 
 
         }
     }
 
-
-
     $slideRight.on('click', function () {
         $background.fadeOut(1000, function () {
             chair++;
             setChair();
             $background.fadeIn(1000);
+            console.log(chair);
+            if (chair > 2) {
+                $slideRight.css("pointer-events", "none");
+            } else {
+                $slideLeft.css("pointer-events", "auto");
+            }
         });
-
     });
 
     $slideLeft.on('click', function () {
@@ -46,8 +55,15 @@ $(function () {
             chair--;
             setChair();
             $background.fadeIn(1000);
+            console.log(chair);
+            if (chair < 2) {
+                $slideLeft.css("pointer-events", "none");
+            } else {
+                $slideRight.css("pointer-events", "auto");
+            }
         });
     });
+
 
     $mobileLeft.on('click', function () {
         $background.fadeOut(1000, function () {
@@ -56,8 +72,9 @@ $(function () {
             $background.fadeIn(1000);
         });
     });
-    
-     $mobileRight.on('click', function () {
+
+    $mobileRight.on('click', function () {
+
         $background.fadeOut(1000, function () {
             chair--;
             setChair();

@@ -186,6 +186,7 @@ li.dropdown {
     height: 295px;
     background-size: cover;
     background-position-x: center;
+    background-repeat: no-repeat;
     background-image: url(../images/black_chair.png);
     @media (min-width: $breakpoint) {
         width: 100%;
