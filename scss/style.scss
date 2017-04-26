@@ -72,14 +72,14 @@ header {
             display: none;
         }
     }
-    ul {
+    .list {
         display: none;
         @media (min-width: $breakpoint) {
             display: block;
             text-align: right;
             li {
                 display: inline-block;
-                padding: 14px 0 8px 45px;
+                padding: 14px 0 8px 38px;
                 a {
                     color: white;
                     text-decoration: none;
@@ -89,6 +89,25 @@ header {
                 }
             }
         }
+    }
+}
+
+.show {
+    display: block;
+    text-align: right;
+    width: 90px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    li {
+        padding-top: 5px;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85em;
+        letter-spacing: 1px;
     }
 }
 

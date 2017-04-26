@@ -10,7 +10,13 @@ $(function () {
     const $dropdown_content = $dropdown.find('.dropdown-content');
     const $triangle = $dropdown.find('.triangle');
     let chair = 1;
+    const $list = $('.list');
+    const $hamb = $('#show-hide-menu');
 
+
+    $hamb.on('click', function () {
+        $list.toggleClass('show').toggle('display');
+    });
 
     $dropdown.on('mouseenter', function () {
         $(this).children().slice(1).css('display', 'block');
