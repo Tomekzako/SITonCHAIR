@@ -196,6 +196,30 @@ li.dropdown {
     }
 }
 
+.orange {
+    @extend .blackChair;
+    height: 250px;
+    background-image: url(../images/orange.png);
+    background-size: 95%;
+    margin-top: 45px;
+    @media (min-width: $breakpoint) {
+        background-size: 135% 75%;
+        height: 428px;
+    }
+}
+
+.red {
+    @extend .blackChair;
+    background-size: 90%;
+    height: 275px;
+    background-image: url(../images/red_chair.png);
+    margin-top: 20px;
+    @media (min-width: $breakpoint) {
+        background-size: 100% 70%;
+        height: 428px;
+    }
+}
+
 @media (max-width: $breakpoint) {
     .order {
         order: 2;

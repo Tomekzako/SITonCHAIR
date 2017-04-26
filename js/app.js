@@ -12,24 +12,15 @@ $(function () {
 
         switch (chair) {
             case 1:
-
-                $background.css('background-image', 'url(images/black_chair.png)');
-                $background.css('background-size', 'cover');
-                $background.css('margin-top', '55px');
+                $background.removeClass('orange').addClass('blackChair');
                 break;
 
             case 2:
-
-                $background.css('background-image', 'url(images/orange.png)');
-                $background.css('background-size', '135% 75%');
-                $background.css('margin-top', '55px');
+                $background.removeClass('blackChair').removeClass('red').addClass('orange');
                 break;
 
             case 3:
-
-                $background.css('background-image', 'url(images/red_chair.png)');
-                $background.css('background-size', '100% 70%');
-                $background.css('margin-top', '20px');
+                $background.removeClass('orange').addClass('red');
                 break;
 
 
