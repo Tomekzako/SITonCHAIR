@@ -93,8 +93,10 @@ header {
 }
 
 .show {
-    display: block;
-    text-align: right;
+    background-color: black;
+    color: white;
+    display: block !important;
+    text-align: center;
     width: 90px;
     position: absolute;
     right: 10px;
@@ -103,7 +105,7 @@ header {
         padding-top: 5px;
     }
     a {
-        color: black;
+        color: #fff;
         text-decoration: none;
         font-weight: 600;
         font-size: 0.85em;
@@ -126,6 +128,9 @@ li.dropdown {
     border-left-color: transparent;
     border-right-color: transparent;
     border-top-color: transparent;
+    @media (max-width: $breakpoint) {
+        bottom: 24px;
+    }
 }
 
 .dropdown-content {

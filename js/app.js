@@ -7,15 +7,18 @@ $(function () {
     var $sectionFirst = $('.first');
     var $background = $sectionFirst.find('.blackChair');
     const $dropdown = $('.dropdown');
-    const $dropdown_content = $dropdown.find('.dropdown-content');
-    const $triangle = $dropdown.find('.triangle');
+    const $triangle = $dropdown.find('.triangle').first();
     let chair = 1;
     const $list = $('.list');
     const $hamb = $('#show-hide-menu');
+    const $clair = $('.clair');
+    const $margarita = $('.margarita');
+    const $visible = $('.visible');
 
 
     $hamb.on('click', function () {
-        $list.toggleClass('show').toggle('display');
+        $list.toggleClass('show');
+        $triangle.toggle('display');
     });
 
     $dropdown.on('mouseenter', function () {
@@ -101,5 +104,20 @@ $(function () {
         });
     });
 
+    $clair.on('mouseenter', function () {
+        $(this).children(":first").css('display', 'none');
+    });
+
+    $clair.on('mouseout', function () {
+        $(this).children(":first").css('display', 'block');
+    });
+
+    $margarita.on('mouseenter', function () {
+        $(this).children(":first").css('display', 'none');
+    });
+
+    $margarita.on('mouseout', function () {
+        $(this).children(":first").css('display', 'block');
+    });
 
 });
